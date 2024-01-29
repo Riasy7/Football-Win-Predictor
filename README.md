@@ -2,11 +2,13 @@
 
 Before hopping into the README, please keep in mind that this program is a basic machine learning model, as I did it I learned a lot and I plan to make it more accurate and add more predictors in the future. Note that the explanations are all things I learned through various sources, such as the pandas and scikit-learn libraries. All the concepts mentioned will be explained very precisely throughout the README instead of having a bunch of unecessary comments in the code.
 
+Keep in mind all the explanation here is are in depth comments and walk-throughs of the code, I place minimal comments in the program to make the code more readable and consice. 
+
 ## Overview
 
 This repository contains a Python program for predicting English Premier League football match outcomes using machine learning for the 2020-2022 seasons. The primary goal is to predict the winner of a football match based on various predictors. This is done by utilizing the pandas library for data manipulation and scikit-learn for implementing Random Forest Classifier, a popular algorithm.
 
-Note that the data used in this program is a more organized and concise version of the data that was scraped using my football data scrapping program. Visit it in this repo: https://github.com/Riasy7/Football-Stats-Data-Scraping
+Note that the dataframe used in this program is a more organized and concise version of the data that was scraped using my football data scrapping program. Visit it in this repo: https://github.com/Riasy7/Football-Stats-Data-Scraping
 
 ### Here are some key steps for this program.
 
