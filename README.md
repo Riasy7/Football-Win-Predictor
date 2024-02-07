@@ -1,16 +1,22 @@
-# Football-Win-Predictor
+# ⚽️ Football-Win-Predictor
 
 Before hopping into the README, please keep in mind that this program is a basic machine learning model, as I did it I learned a lot and I plan to make it more accurate and add more predictors in the future. Note that the explanations are all things I learned through various sources, such as the pandas and scikit-learn libraries. All the concepts mentioned will be explained very precisely throughout the README instead of having a bunch of unecessary comments in the code.
 
 Keep in mind all the explanation here is are in depth comments and walk-throughs of the code, I place minimal comments in the program to make the code more readable and consice. 
 
-## Overview
+## 📋 Overview
 
 This repository contains a Python program for predicting English Premier League football match outcomes using machine learning for the 2020-2022 seasons. The primary goal is to predict the winner of a football match based on various predictors. This is done by utilizing the pandas library for data manipulation and scikit-learn for implementing Random Forest Classifier, a popular algorithm.
 
 Note that the dataframe used in this program is a more organized and concise version of the data that was scraped using my football data scrapping program. Visit it in this repo: https://github.com/Riasy7/Football-Stats-Data-Scraping
 
-### Here are some key steps for this program.
+## 📦 Technologies
+
+  - `Python`
+  - `scikit-learn`
+  - `pandas`
+  
+## 📗 Steps for this program.
 
 **(skip to results if you don't want to have a detailed explanation of each part of the program)**
 
@@ -33,6 +39,7 @@ Note that the dataframe used in this program is a more organized and concise ver
   - Now, we can start training our machine learning model. We use *RandomForestClassifier*, this is a model I imported from scikit-learn. This model is really powerful as is really useful.
     - Here's a few things to know about RandomForestClassifier:
       - A random forest is a number of decision trees, and each decision tree has slightly different params.
+        Refer to this module for more information on rfc: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
         <img src="https://miro.medium.com/v2/resize:fit:1358/1*i69vGs4AfhdhDUOlaPVLSA.png" alt="Terms to Understand">
         
       - Let's say a team has the opponent code of 18, and another is 14, this doesn't mean that it's more difficult to win if you're 18. They are just values we set for different opponents. Now this is where random forest comes in, a linear model wouldn't have picked this fact up, whereas random forest does pick it up.
@@ -89,14 +96,25 @@ Note that the dataframe used in this program is a more organized and concise ver
   - we end the code of with a bit of data clean up like the team names are different sometimes.
   - We want to normalize team names for example wolves and wolverhampton wanderers are the same team, so we want to combine them into one team, we'll do this by creating a dictionary and use pandas map function
 
+## 👨‍💻📚 What I learned
+
+- Preparing data: I learned about the importance of data preprocessing in machine learning, particularly converting object data types to numerical formats suitable for analysis.
+- Feature Selection: Understanding how to choose relevant predictors for a machine learning model is crucial.
+- Random Forest Classifier: I gained knowledge about the Random Forest Classifier algorithm and its application in predictive modeling. This included understanding its parameters such as n_estimators and min_samples_split, and how they affect model performance and overfitting. This was very crucial for this model to have good accuracy
+- How data should be tested: I learned the importance of splitting data into training and testing sets to evaluate model performance accurately. This process ensures that the model is tested on unseen data, so that the model can have a realistic assessment of its predictive capabilities.
+- Rolling Averages: I learned about the concept of rolling averages. Implementing rolling averages allowed for better representation of a teams recent performance and was crucial for the improvement of prediction accuracy.
+
+To sum it up, this project provided me really valuable experience and foundation for building a machine learning model. I greatly enjoyed it and hope to achieve much more by diving more into scikit-learn and pandas libraries which were crucial for this project.
 
 ### Results
 
 The machine learning model achieved a precision score improvement from 47% to 62.5%, enhancing the accuracy of match outcome predictions. The code provides a foundation for further exploration and improvement of the prediction model.
 
-**Things I plan on doing:**
+## 💡 Future Improvements
+
 - In the near future, I'd like to improve the accuracy by doing many things such as adding more predictors, trying a different model, different params, different time period or even longer time period.
 - Another really cool thing I'd love to test out is seeing how the precision and accuracy would perform compared to other leagues than the English Premier League. Or even, a completely different sport!
+
 
 Thank if you read through this long README, I hope it helped you understand the basics of machine learning. I hope to learn a lot more and implement this same thought process for a lot of different datasets.
   
