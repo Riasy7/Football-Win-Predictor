@@ -106,7 +106,7 @@ class MissingDict(dict):
 
 # mapping for team names
 map_values = {
-    "Birghton and Hove Albion": "Brighton",
+    "Brighton and Hove Albion": "Brighton",
     "Manchester United": "Manchester Utd",
     "Newcastle United": "Newcastle Utd",
     "Tottenham Hotspur": "Tottenham",
